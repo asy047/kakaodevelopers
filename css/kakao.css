@@ -1,0 +1,390 @@
+@charset "utf-8";
+@import url(font.css);
+
+html {font-size: 10px;}
+body {
+	background: #000;
+	font: 1.5rem "Noto Sans KR", sans-serif;
+	color: #fff;
+}
+
+/*common*/
+.inner {
+	position: relative;
+	max-width: 1024px;
+	margin: 0 auto;
+	padding-top: 100px;
+}
+.inner h2 {
+	font-size: 2.6rem;
+	color: rgba(255, 255, 255, 0.6);
+	margin-bottom: 30px;
+}
+
+
+header {
+	position: fixed;
+	top: 0;left: 0;
+	width: 100%;
+	height: 70px;
+	z-index: 100;
+}
+header .logo {
+	float: left;
+}
+header .logo > a {
+	display: block;
+	padding: 20px 30px;
+	font-size: 1.7rem;
+}
+header .mobile-menu {display: none;}
+header .gnb {float: right; padding: 20px;}
+header .gnb > ul > li {
+	position: relative;
+	float: left;
+}
+header .gnb > ul > li > a {
+	display: block;
+	font-size: 1.6rem;
+	padding: 10px;
+}
+header .gnb .util-menu > a {
+	width: 30px;
+	height: 30px;
+	background: url(../img/menu.png) no-repeat center / 24px;
+}
+header .gnb .util-menu .util-sub {
+	position: absolute;
+	top: 50px; right: 10px;
+	width: 220px;
+	background: #222;
+	box-sizing: border-box;
+	border: 1px solid #525252;
+	font-size: 1.3rem;
+	display: none;
+}
+header .gnb .util-menu.on .util-sub {display: block;}
+header .gnb .util-menu .util-sub li {
+	padding: 10px;
+}
+header .gnb .util-menu .util-sub a:hover {
+	color: rgba(255,255,255,0.7)
+}
+header .gnb .util-menu dl {padding: 10px; border-top: 1px solid #525252}
+header .gnb .util-menu div + div {margin-top: 10px;}
+header .gnb .util-menu dl dt {
+	display: inline-block;
+	margin-right: 15px;
+	color: #777;
+}
+header .gnb .util-menu dl dd {display: inline-block;}
+
+/*#main-visual*/
+#main-visual {
+	position: relative;
+	height: 500px;
+	background: url(../img/banner1.png) no-repeat center / cover;
+}
+#main-visual .slide_text01 {
+	position: absolute;
+	top: 40%; left: 20%;
+}
+#main-visual .slide_text01 > p {
+	font-size: 2.8rem;
+	margin-bottom: 30px;
+}
+#main-visual .slide_text01 > .btn-start {
+	display: inline-block;
+	padding: 10px 30px;
+	background: #efefef;
+	font-size: 1.6rem;
+	color: #222;
+}
+
+/*recommand*/
+#recommand {}
+#recommand .recommand-group {display: inline-block;margin-left: -10px;}
+#recommand .re-list {
+	position: relative;
+	float: left;
+	width: 248.5px;
+	height: 320px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	padding: 25px;
+	background: #1a1a1c;
+	box-sizing: border-box;
+	line-height: 1.7
+}
+#recommand .re-list h3 {
+	font-size: 2rem;
+	margin-bottom: 20px;	
+}
+#recommand .re-list > p {
+	font-size: 1.4rem;
+	color: rgba(255,255,255,0.6);
+}
+#recommand .re-list .btn-link {
+	position: absolute;
+	top: 15px; right: 20px;;
+	width: 50px;
+}
+#recommand .re-list .btn-link img {
+	width: 100%;
+	height: auto;
+}
+#recommand .re-list .btn-area {
+	position: absolute;
+	bottom: 30px; left: 0;
+	width: 100%;
+	text-align: center;
+}
+#recommand .re-list .btn-area > a {
+	display: inline-block;
+	padding: 8px 20px;
+	background: rgba(255,255,255,.2);
+	transition: all .2s;
+}
+#recommand .re-list .btn-area > a:hover {
+	background: rgba(255,255,255,0);
+}
+#recommand .re-list.blue {
+	float: left;
+	background: #051edb;
+}
+#recommand .re-list span{
+	position: relative;
+	z-index: 10;
+}
+#recommand .re-list.blue:before {
+	position: absolute;
+	left: 0; top: 0;
+	content: '';
+	display: block;
+	width: 0%; height: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	transition: all 0.3s;
+}
+#recommand .re-list.blue:hover:before {
+	width: 100%;
+}
+#recommand .product-all-mobile {display: none;}
+
+/*api-spec*/
+#api-spec h2:before, #api-spec h2:after {
+	
+}
+#api-spec h2 {
+	clear: both;
+	margin-top: 30px;
+}
+#api-spec strong {
+	font-size: 4rem;
+	font-weight: 500;
+}
+#api-spec .api-list {margin-top: 60px;}
+#api-spec .api-list li {
+	float: left;
+	width: 301px;
+	margin-right: 60px;
+}
+#api-spec .api-list li:last-child {margin: 0;}
+#api-spec .api-list h3 {
+	padding-left: 50px;
+	height: 40px;
+	font-size: 2.2rem;
+	line-height: 40px;
+	background: url(../img/together.png) no-repeat 0 0 / 40px;
+}
+#api-spec .api-list li:nth-child(2) h3{background-image: url(../img/productivity.png)}
+#api-spec .api-list li:nth-child(3) h3{background-image: url(../img/value.png)}
+#api-spec .api-list .text {
+	display: inline-block;
+	margin: 20px 0;
+	word-break: keep-all;
+	color: rgba(255, 255, 255, 0.7);
+}
+#api-spec .api-list li span {
+	color: #5a7bc4;
+}
+#api-spec .api-list li:nth-child(2) span {color: purple;}
+#api-spec .api-list li:nth-child(3) span {color: #8fa9bc;}
+
+/*공지사항과 최신뉴스*/
+#board-area article {margin-bottom: 50px;}
+#board-area .all-view {
+	position: relative;
+	display: block;
+	height: 170px;
+	background: url(../img/banner2.png) no-repeat center/cover; /*contian은 height가 100%로 맞춰진다*/
+}
+#board-area .all-view img {
+	position: absolute;
+	top: 30%; right: 30px;
+	width: 320px;
+	height: auto;
+}
+#board-area .all-view span {
+	position: absolute;
+	bottom: 30px; right: 30px;
+	display: block;
+	font-size: 1.6rem;
+	transition: all .3s;
+}
+#board-area .all-view:hover span {transform: translateX(-40px);}
+#board-area .all-view span:after {
+	position: absolute;
+	top: 5px; right: -30px;
+	content: '\f061';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
+	opacity: 0;
+	transition: all .3s;
+	
+}
+#board-area .all-view:hover span:after {
+	opacity: 0.7;
+}
+#board-area .board li {
+	padding: 25px 0;
+	border-bottom: 1px solid #555;
+	font-weight: 800;
+	color: #aaa;
+}
+#board-area .board li .notice-txt { 
+	/*li에다 안주고 span에다 positoin relative 줘서 span만큼 밑줄이 쳐지게.*/
+	position: relative;
+	display: inline-block;
+	width: auto;
+}
+
+#board-area .board li .notice-txt:after {
+	position: absolute;
+	bottom: -25px; left: 0;
+	content: '';
+	width: 0;
+	height: 1px;
+	background: #fff;
+	transition: all .4s;
+}
+/*#board-area .board li:first-child:hover .notice-txt:after {
+	width: 68%;
+}*/
+#board-area .board li:hover .notice-txt:after {
+	width: 100%;
+}
+#board-area .board time {
+	display: inline-block;
+	margin-left: 20px;
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: #777;
+}
+
+#board-area .news li {
+	float: left;
+	width: 32%;
+	margin-right: 2%;
+}
+#board-area .news li:last-child {margin-right: 0;}
+#board-area .news img {display: block; width: 100%;}
+#board-area .news .news-txt {
+	display: block;
+	position: relative;
+	height: 100px;
+	padding: 15px;
+	background: #2d0e73;
+}
+#board-area .news .news-txt:before {
+	content: '\f30b';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
+	position: absolute;
+	bottom: 20px; left: 0;
+	opacity: 0;
+	transition: all .2s
+}
+#board-area .news .news-txt:hover:before {
+	left: 20px;
+	opacity: .8;
+}
+#board-area .news .news-txt:after {
+	position: absolute;
+	top: 0; left: 0;
+	content: '';
+	width: 0;
+	height: 100%;
+	background: rgba(255,255,255,.08);
+	transition: all .3s;
+}
+#board-area .news .news-txt:hover:after{
+	width: 100%;
+}
+#board-area .news .news-txt small {
+	font-size: 1.4rem;
+	color: rgba(198,198,198,.7);
+}
+#board-area .news .news-txt h3 {
+	margin-top: 5px; font-size: 1.6rem;
+}
+
+/*footer*/
+footer {
+   /*overflow: hidden;*/
+   padding: 10px 20px;
+   height: 30px;
+   background: #363636;
+   color: #989898;
+   font-size: 1.4rem;
+}
+footer .copy {
+   float: left;
+   line-height: 30px;
+}
+footer .fnb-right {
+   float: right;
+}
+footer .fnb-right .fnb {
+   float: left;
+}
+footer .fnb-right .fnb > li {
+   float: left;
+   margin: 0 10px;
+}
+footer .fnb-right .fnb > li > a {
+   line-height: 30px;
+}
+
+footer .fnb-right .family-link {
+   display: block;
+   width: 120px;
+   padding: 3px;
+   text-align: center;
+   border: 1px solid #7c7c7c;
+   font-size: 1.3rem;
+}
+footer .fnb-right .family-site {
+   position: relative;
+   float: right;
+   margin-left: 30px;
+}
+
+footer .fnb-right .family-list {
+   position: absolute;
+   bottom: 26px; left: 0%;
+   background: #1f1f1f;
+   border: 1px solid #7c7c7c;
+   color: #7c7c7c;
+   width: 100%;
+   font-size: 1.2rem;
+   box-sizing: border-box;
+   display: none;
+}
+footer .fnb-right .family-list.on {display: block;}
+footer .fnb-right .family-list > a {
+   display: block;
+   padding: 5px 10px;
+}
+
+
+
