@@ -24,6 +24,7 @@
 	}
 	header .gnb {
 		float: none;
+		display: none;
 		position: absolute;
 		top: 80px; left: 50%;
 		transform: translateX(-50%);
